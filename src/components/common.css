@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;  
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.header-container {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    height: 50px;
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    height: 2px;
+    width: 20px;
+    margin-bottom: 3px;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+}
+
+.menu-icon {
+    flex-basis: 30px;
+    align-items: flex-start !important;
+    margin-left: 15px;
+    display: none;
+}
+.logo {
+    flex-basis: 150px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.header-right {
+    padding: 0px 20px;
+    flex: 1;
+    text-align: end;
+    justify-content: flex-end;
+}
+.header-right img,.nav-bar img {
+    width: 15px;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.dropdown {
+    padding:10px;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}
+.dropdown:hover {
+    background-color: gold;
+    color: black;
+}
+
+.active {
+    background-color: gold;
+    color: black;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    display: none;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    top: 35px;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    display: block;
+  }
+
+.nav-bar {
+    width: 250px;
+    position: fixed;
+    top:50px;
+    left:0px;
+    z-index: 1;
+    height: calc(100% - 50px);
+    border-right: 1px solid black;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    justify-content: flex-start;
+    background-color: dodgerblue;
+}
+.nav-bar > div {
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-bottom: 1px solid white;
+}
+.nav-bar > div:hover {
+    background-color: gold;
+    color:black;
+}
+.main-container {
+    width: calc(100% - 250px);
+    height: calc(100% - 50px);
+    margin-left: 250px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    
+}
+
+.sub-container {
+    height: 50%;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.chart-tracer {
+    margin-top: 50px;
+    height: 50%;
+    width: 50%;
+    justify-content: flex-start;
+    background-color: #fff;
+}
+.log-tracer {
+    width: 50%;
+    margin-top: 50px;
+    height: 50%;
+    justify-content: flex-start;
+    background-color: wheat;
+}
+.program-tracer {
+    width: 100%;
+    height: 50%;
+    border-top: 1px solid black;
+    background-color: white;
+    justify-content: flex-start;
+}
+
+.program-tracer > p {
+    padding: 5px;
+}
+.heading {
+    height: 100%;
+    justify-content: stretch;
+    background-color: #717171 ;
+    writing-mode: vertical-rl;
+    color: white;
+    padding: 8px;
+    letter-spacing: 5px;
+    font-size: larger;
+    text-orientation: mixed;
+    text-align: center;
+}
+.program {
+    flex: 1;
+    align-self: center;
+    height: 100%;
+    width: 100%;
+}
+
+.program > div {
+    margin: 5px;
+    margin-bottom: 0px;
+}
+::-webkit-scrollbar {
+   display: none    ;
+  }
+
+td,th {
+    border: 1px solid #dddddd;
+    text-align: left;
+  }
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+td:nth-child(odd) {
+    width: 100px;
+    text-align: center;
+}
+
+.chart {
+    align-items: flex-end;
+}
+
+.tile {
+    width: 30px;
+    background-color: grey;
+    transition: all 0.3s ease-in-out;
+    color:white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.index {
+    width: 30px;
+    margin: 5px;
+    margin-top: 0px;
+    height: 20px;
+}
+
+@media screen and (max-width: 900px) {
+    .menu-icon {
+        display: flex;
+    }
+    .slide {
+        transform: translateX(-100%);
+    }
+    .main-container {
+        margin-left: 0px;
+        width: 100%;
+    }
+    .chart-tracer {
+        width: 100%;
+    }
+    .log-tracer {
+        width: 100%;
+        margin-top: 0px;
+        border-top: 1px solid black     ;
+    }
+}
